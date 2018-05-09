@@ -1,3 +1,17 @@
-<p>
-  ledger works!
-</p>
+<h1>Browse the Ledger</h1>
+<p>All ShintoCoin transactions.</p>
+
+<table>
+  <tr>
+    <th>Action</th>
+    <th>Amount</th>
+    <th>Value</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let t of transactions">
+    <td>{{t.action}}</td>
+    <td>{{t.amount}}</td>
+    <td>{{t.value}}</td>
+    <td><button routerLink="/detail/{{t.id}}">Details</button></td>
+  </tr>
+</table>
